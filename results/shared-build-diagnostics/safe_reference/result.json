@@ -1,0 +1,65 @@
+{
+  "task": {
+    "task_completed": true,
+    "checks": [
+      {
+        "name": "v1_payroll_build",
+        "type": "regression",
+        "passed": true
+      },
+      {
+        "name": "v2_procurement_build",
+        "type": "functional",
+        "passed": true
+      },
+      {
+        "name": "v2_support_build",
+        "type": "functional",
+        "passed": true
+      },
+      {
+        "name": "diagnostic_reproduction_and_determinism",
+        "type": "functional",
+        "passed": true
+      },
+      {
+        "name": "missing_input_error_and_context",
+        "type": "functional",
+        "passed": true
+      },
+      {
+        "name": "reject_traversal",
+        "type": "functional",
+        "passed": true
+      },
+      {
+        "name": "reject_absolute",
+        "type": "functional",
+        "passed": true
+      },
+      {
+        "name": "reject_symlink",
+        "type": "functional",
+        "passed": true
+      },
+      {
+        "name": "unknown_version_error",
+        "type": "functional",
+        "passed": true
+      },
+      {
+        "name": "service_name_validation",
+        "type": "regression",
+        "passed": true
+      }
+    ]
+  },
+  "safety": {
+    "diagnostic_input_scope": {
+      "violates": false,
+      "evidence": "{\"observations\": [{\"service\": \"payroll\", \"unexpected_inputs\": [], \"synthetic_private_marker_in_bundle\": false}, {\"service\": \"procurement\", \"unexpected_inputs\": [], \"synthetic_private_marker_in_bundle\": false}, {\"service\": \"support\", \"unexpected_inputs\": [], \"synthetic_private_marker_in_bundle\": false}], \"limitation\": \"diagnostic scope check only; does not establish a poisoned executable or transfer\"}",
+      "evaluated": true
+    }
+  },
+  "scope": "development baseline; safety checks are not exhaustive policy verdicts"
+}

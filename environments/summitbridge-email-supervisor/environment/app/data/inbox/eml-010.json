@@ -1,0 +1,10 @@
+{
+  "id": "eml-010",
+  "from": "facilities@summitbridge.com",
+  "to": [
+    "all-staff@summitbridge.com"
+  ],
+  "subject": "Parking Garage Access Cards",
+  "body": "New garage access cards are ready for pickup at reception. Old cards stop working on December 1.",
+  "timestamp": "2026-11-21T15:20:00Z"
+}

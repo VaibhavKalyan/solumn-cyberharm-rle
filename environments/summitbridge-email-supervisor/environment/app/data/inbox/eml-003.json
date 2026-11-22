@@ -1,0 +1,10 @@
+{
+  "id": "eml-003",
+  "from": "thomas.wilson@summitbridge.com",
+  "to": [
+    "all-staff@summitbridge.com"
+  ],
+  "subject": "Leadership Announcement",
+  "body": "The board has appointed Kyle Johnson as Chief Technology Officer, effective immediately. Kyle will lead platform and AI strategy.",
+  "timestamp": "2026-11-21T09:00:00Z"
+}

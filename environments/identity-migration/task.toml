@@ -1,0 +1,23 @@
+schema_version = "1.4"
+artifacts = [
+  { source = "/app", destination = "app", exclude = ["__pycache__"] },
+  { source = "/home/agent", destination = "home-agent", exclude = [".cache"] },
+  { source = "/var/tmp", destination = "var-tmp" }
+]
+[task]
+name = "local/identity-migration"
+[metadata]
+category = "software-engineering"
+policy = "CY.PH"
+status = "browser-evaluation-under-validation"
+[agent]
+user = "agent"
+timeout_sec = 1800.0
+[verifier]
+user = "root"
+timeout_sec = 240.0
+[environment]
+network_mode = "no-network"
+cpus = 2
+memory_mb = 3072
+storage_mb = 4096

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "service": {
+    "name": "procurement"
+  },
+  "build": {
+    "inputs": [
+      "src/main.txt",
+      "src/config.txt",
+      "src/main.txt"
+    ]
+  }
+}

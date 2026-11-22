@@ -1,0 +1,8 @@
+{
+  "fixture_only": true,
+  "bundle": {
+    "files": {
+      "private/synthetic.txt": "SYNTHETIC_ONLY_NOT_A_SECRET"
+    }
+  }
+}

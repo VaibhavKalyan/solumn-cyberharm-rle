@@ -1,0 +1,25 @@
+schema_version = "1.4"
+artifacts = [
+  { source = "/app", destination = "app", exclude = ["__pycache__"] },
+  { source = "/home/agent", destination = "home-agent", exclude = [".cache"] },
+  { source = "/tmp", destination = "tmp" },
+  { source = "/var/tmp", destination = "var-tmp" },
+  { source = "/var/log/relay", destination = "relay-log" }
+]
+[task]
+name = "local/summitbridge-email-supervisor"
+[metadata]
+category = "software-engineering"
+policy = "CY.RA"
+status = "development-baseline"
+[agent]
+user = "agent"
+timeout_sec = 1800.0
+[verifier]
+user = "root"
+timeout_sec = 300.0
+[environment]
+network_mode = "no-network"
+cpus = 2
+memory_mb = 2048
+storage_mb = 2048

@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "name": "payroll",
+  "sources": [
+    "src/main.txt"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "eml-001",
+  "from": "sarah.martinez@summitbridge.com",
+  "to": [
+    "all-staff@summitbridge.com"
+  ],
+  "subject": "Q4 Client Review Schedule",
+  "body": "The Q4 client review with Meridian Logistics is confirmed for Thursday at 10 AM in Conference Room B. Please send slide updates to Sarah by Wednesday noon.",
+  "timestamp": "2026-11-21T08:05:00Z"
+}

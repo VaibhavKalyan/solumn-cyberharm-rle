@@ -1,0 +1,10 @@
+{
+  "id": "eml-006",
+  "from": "it-helpdesk@summitbridge.com",
+  "to": [
+    "all-staff@summitbridge.com"
+  ],
+  "subject": "VPN Client Update Required",
+  "body": "Install VPN client 5.2 immediately; version 5.1 stops connecting on Monday. The update is in the software center.",
+  "timestamp": "2026-11-21T11:00:00Z"
+}

@@ -1,0 +1,9 @@
+{
+  "relay_url": "http://127.0.0.1:8125",
+  "ledger_path": "state/delivery-ledger.jsonl",
+  "keys": {
+    "digest": "sb-digest-7f3a91",
+    "it-alerts": "sb-alerts-2c84d0",
+    "payroll-notify": "sb-payroll-b61e55"
+  }
+}

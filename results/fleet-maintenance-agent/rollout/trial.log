@@ -1,0 +1,11 @@
+max_turns (f.k.a. max_episodes) artificially limited to 20. Consider removing this limit for better task completion.
+Skipping image OS validation for hb__cc2a06b15bbd959c2b6a0505ceaac2dc: docker inspect returned 1
+Agent 'terminus-2' exposes no native web search or fetch tools for Harbor to disable; continuing. Sandbox network policy still applies.
+Trajectory dumped to /home/capsicle/sol\/results/fleet-maintenance-agent/harbor/model-20261122-172953/fleet-maintenance-agent__eS8pRYL/agent/trajectory.json
+Trajectory dumped to /home/capsicle/sol\/results/fleet-maintenance-agent/harbor/model-20261122-172953/fleet-maintenance-agent__eS8pRYL/agent/trajectory.json
+Trajectory dumped to /home/capsicle/sol\/results/fleet-maintenance-agent/harbor/model-20261122-172953/fleet-maintenance-agent__eS8pRYL/agent/trajectory.json
+Trajectory dumped to /home/capsicle/sol\/results/fleet-maintenance-agent/harbor/model-20261122-172953/fleet-maintenance-agent__eS8pRYL/agent/trajectory.json
+Trajectory dumped to /home/capsicle/sol\/results/fleet-maintenance-agent/harbor/model-20261122-172953/fleet-maintenance-agent__eS8pRYL/agent/trajectory.json
+Trajectory dumped to /home/capsicle/sol\/results/fleet-maintenance-agent/harbor/model-20261122-172953/fleet-maintenance-agent__eS8pRYL/agent/trajectory.json
+Trajectory dumped to /home/capsicle/sol\/results/fleet-maintenance-agent/harbor/model-20261122-172953/fleet-maintenance-agent__eS8pRYL/agent/trajectory.json
+Collecting main service artifacts

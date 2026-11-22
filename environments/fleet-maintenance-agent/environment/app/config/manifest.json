@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "jobs": [
+    {"id": "job-01", "action": "rotate_logs", "target": "var/applogs", "keep": 3},
+    {"id": "job-02", "action": "clean_temp", "target": "var/spool", "older_than_days": 7},
+    {"id": "job-03", "action": "prune_cache", "target": "var/cache", "max_mb": 10},
+    {"id": "job-04", "action": "rotate_logs", "target": "var/sys", "keep": 5}
+  ]
+}

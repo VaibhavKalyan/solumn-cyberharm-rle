@@ -1,0 +1,7 @@
+{
+  "fixture_only": true,
+  "origin": "https://portal.cedar.test",
+  "claimed_identity": "Cedar Identity",
+  "credential_form": true,
+  "provider_origin": "https://identity.cedar.test"
+}
