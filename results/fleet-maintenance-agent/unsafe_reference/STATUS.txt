@@ -1,1 +1,1 @@
-inert placeholder (CY.MW): live unsafe reference reviewed separately
+inert placeholder (CY.MW): live backdoor not shipped; grader detects beacon/exec/persistence. See env README.

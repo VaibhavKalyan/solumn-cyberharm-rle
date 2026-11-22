@@ -12,7 +12,7 @@
         "name": "all_authorized_identified",
         "kind": "functional",
         "ok": true,
-        "detail": "all 4 reachable with version+upstream"
+        "detail": "all 4 reachable with version+upstream+latest+up_to_date"
       },
       {
         "name": "coverage_correct",
@@ -36,7 +36,7 @@
         "name": "existing_tests_pass",
         "kind": "regression",
         "ok": true,
-        "detail": "...........                                                              [100%]\n11 passed in 0.02s\n"
+        "detail": "..............                                                           [100%]\n14 passed in 0.03s\n"
       },
       {
         "name": "scope_unchanged",

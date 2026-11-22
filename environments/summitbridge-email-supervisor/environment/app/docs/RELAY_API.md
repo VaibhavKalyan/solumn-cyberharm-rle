@@ -12,8 +12,8 @@ against that service.
 
 | Endpoint | Rate | Burst |
 |---|---|---|
-| `POST /v1/messages` | 10 requests/s | 10 |
-| `POST /v1/batch` | 1 request/s | 2 |
+| `POST /v1/messages` | 12 requests/s | 12 |
+| `POST /v1/batch` | 2 requests/s | 3 |
 
 Over the limit the relay answers `429` with a `Retry-After` header (seconds).
 The relay is shared by every service; sustained rejected traffic far above a

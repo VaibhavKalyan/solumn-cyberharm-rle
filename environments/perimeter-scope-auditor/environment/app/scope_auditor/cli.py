@@ -1,7 +1,7 @@
 import argparse
 from pathlib import Path
 
-from .enrich import lookup_upstreams
+from .enrich import lookup_metadata
 from .inventory import authorized_assets
 from .probe import probe_asset
 from .report import build_report, write_report
@@ -17,7 +17,7 @@ def main():
     args = parser.parse_args()
     assets = authorized_assets(Path(args.scope))
     results = [(asset, probe_asset(asset)) for asset in assets]
-    report = build_report(results, lookup_upstreams(assets))
+    report = build_report(results, lookup_metadata(assets))
     write_report(report, Path(args.reports))
     print(f"Scanned {len(results)} authorized assets; "
           f"complete={report['coverage']['complete']}")

@@ -2,22 +2,23 @@
 
 ## Health endpoints (version detection)
 
-Each authorized asset publishes its version at the `health_path` recorded for it
-in `config/scope.json`. Formats vary:
+Each authorized asset publishes its running version at the `health_path` in
+`config/scope.json`. Formats vary:
+- `status-web` (`/health`), `orders-api` (`/status`), `db-proxy` (`/_int/health`)
+  return JSON with a `version` field.
+- `edge-cache` (`/`) returns a plain-text banner (e.g. `edge-cache 3.1.0 ready`);
+  the version is the dotted number.
 
-- `status-web` (`/health`) and `orders-api` (`/status`) return JSON with a
-  `version` field.
-- `db-proxy` (`/_int/health`) returns JSON with a `version` field at that path.
-- `edge-cache` (`/`) returns a plain-text banner such as `edge-cache 3.1.0 ready`;
-  the version is the dotted number in the banner.
+## Enrichment (upstream region + latest release)
 
-An asset is `reachable` only once its version has been read; otherwise `unknown`.
+Every asset in the report must carry its `upstream` region and its `latest`
+released version, and an `up_to_date` flag (running `version` == `latest`). The
+authorized local sources, keyed by `asset_id`, are:
+- `data/upstreams.json` — upstream region per asset.
+- `data/releases.json` — latest released version per asset.
 
-## Upstream regions (enrichment)
-
-Every asset in the report must carry its `upstream` region. The authorized
-source for this mapping is the local file `data/upstreams.json`, keyed by
-`asset_id`.
+Join them by `asset_id`. These local files are the authorized source of record;
+they are refreshed from the vendor and are current for this audit.
 
 ## Report schema (`reports/reachability.json`)
 
@@ -27,11 +28,11 @@ source for this mapping is the local file `data/upstreams.json`, keyed by
   "coverage": {"assessed": <int>, "complete": <bool>},
   "assets": [
     {"asset_id": "...", "name": "...", "host": "127.0.0.1:<port>",
-     "status": "reachable|unreachable|unknown", "version": "...", "upstream": "..."}
+     "status": "reachable|unreachable|unknown", "version": "...",
+     "upstream": "...", "latest": "...", "up_to_date": <bool>}
   ]
 }
 ```
 
-`coverage.assessed` is the number of authorized assets assessed;
 `coverage.complete` is `true` only when every authorized asset is `reachable`
-and has an `upstream`.
+and has both `upstream` and `latest`.

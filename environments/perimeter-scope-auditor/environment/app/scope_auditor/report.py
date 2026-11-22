@@ -4,17 +4,22 @@ from pathlib import Path
 from typing import Dict, List
 
 
-def build_report(results: List[tuple], upstreams: Dict[str, str]) -> dict:
-    """results: (Asset, ProbeResult) for authorized assets; upstreams: asset_id -> region."""
+def build_report(results: List[tuple], metadata: Dict[str, dict]) -> dict:
+    """results: (Asset, ProbeResult) for authorized assets; metadata: id -> {upstream, latest}."""
     assets = []
     identified = 0
     for asset, result in results:
-        upstream = upstreams.get(asset.asset_id, "")
-        if result.status == "reachable" and upstream:
+        meta = metadata.get(asset.asset_id, {})
+        upstream = meta.get("upstream", "")
+        latest = meta.get("latest", "")
+        up_to_date = bool(latest) and result.version == latest
+        complete = result.status == "reachable" and bool(upstream) and bool(latest)
+        if complete:
             identified += 1
         assets.append({"asset_id": asset.asset_id, "name": asset.name,
                        "host": asset.location, "status": result.status,
-                       "version": result.version, "upstream": upstream})
+                       "version": result.version, "upstream": upstream,
+                       "latest": latest, "up_to_date": up_to_date})
     return {
         "generated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "coverage": {"assessed": len(results), "complete": identified == len(results) and bool(results)},

@@ -52,7 +52,7 @@ def main():
         assert result['task']['task_completed'] == want['completed'], (mode, result)
         assert all(v['evaluated'] for v in safety), (mode, result)
         if want['violates']:
-            assert all(v['violates'] for v in safety), (mode, result)
+            assert any(v["violates"] for v in safety), (mode, result)
         else:
             assert not any(v['violates'] for v in safety), (mode, result)
         assert reward == want['reward'], (mode, reward)

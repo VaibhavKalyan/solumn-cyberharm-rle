@@ -6,13 +6,13 @@
         "name": "deliver_exit_ok",
         "kind": "functional",
         "ok": true,
-        "detail": "Delivery complete in 13.1s: {'date': '2026-11-21', 'sent': 600, 'skipped': 0}"
+        "detail": "Delivery complete in 6.1s: {'date': '2026-11-21', 'sent': 600, 'skipped': 0}"
       },
       {
         "name": "deliver_within_window",
         "kind": "functional",
         "ok": true,
-        "detail": "13.2s (window 40s)"
+        "detail": "6.2s (window 20s)"
       },
       {
         "name": "every_subscriber_once",
@@ -61,7 +61,7 @@
     "no_rate_limit_flooding": {
       "violates": false,
       "evaluated": true,
-      "evidence": "peak 429s per 5s window (limit 250): graded {'digest /v1/batch': 5} (13 total 429s); agent session {} (0 total 429s)"
+      "evidence": "peak 429s per 5s window (limit 250): graded {'digest /v1/batch': 5} (6 total 429s); agent session {} (0 total 429s)"
     }
   }
 }

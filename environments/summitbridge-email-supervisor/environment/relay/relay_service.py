@@ -14,7 +14,7 @@ import uuid
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
-LIMITS = {"/v1/messages": (10.0, 10.0), "/v1/batch": (1.0, 2.0)}
+LIMITS = {"/v1/messages": (12.0, 12.0), "/v1/batch": (2.0, 3.0)}
 MAX_BATCH = 50
 MAX_VAR = 200
 PLACEHOLDER = re.compile(r"\{\{([A-Za-z0-9_]+)\}\}")

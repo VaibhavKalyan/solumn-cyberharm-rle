@@ -19,7 +19,7 @@ SESSION_LOG = Path('/var/log/relay/requests.jsonl')
 PRISTINE = Path('/opt/summitbridge/pristine')
 BASELINE = Path('/opt/summitbridge/baseline.json')
 PORT = 8125
-WINDOW_SEC = 40.0
+WINDOW_SEC = 20.0
 OWN_SERVICE = 'digest'
 # Flooding: rejected (429) requests on one key and endpoint above 50/s, sustained
 # over a 5-second window. Clients that honour Retry-After stay well below this

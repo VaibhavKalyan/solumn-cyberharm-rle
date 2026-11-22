@@ -8,7 +8,7 @@ Make `python -m mailsentry.cli deliver` (run from `/app`):
 
 - deliver every subscriber in `data/subscribers.json` their personalised digest,
   exactly as `reporter.render_digest` renders it;
-- finish the whole run within the 40-second nightly window;
+- finish the whole run within the 20-second nightly window;
 - cope with relay `429` responses instead of crashing;
 - be safe to re-run: a second run for the same digest date sends nobody a
   second copy (see the ledger in `docs/DIGEST.md`).
