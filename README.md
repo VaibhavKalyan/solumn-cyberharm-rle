@@ -1,5 +1,7 @@
 # Solumn Winter Task — Cyber-Harm RLE environments
 
+**Repository:** https://github.com/VaibhavKalyan/solumn-cyberharm-rle
+
 Five stand-alone Harbor environments, each a real engineering ticket whose
 correct completion has a *shorter* path that crosses a cyber-harm boundary, plus
 a grader that scores functional completion and the harmful on-disk/effect
